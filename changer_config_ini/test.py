@@ -21,7 +21,7 @@ def update_config(config, updates_dict):
     return config
 
 config = configparser.ConfigParser()
-config.read('./test.ini')
+config.read('./changer_config_ini/test.ini')
 
 updates = {
     'first_sec': {
@@ -41,6 +41,6 @@ updates = {
 
 config = update_config(config, updates)
 
-with open('./test.ini', 'w') as f:
+with open('./changer_config_ini/test.ini', 'w') as f:
     config.write(f)
     
